@@ -12,7 +12,7 @@ codefold = True
 
 # For webcam input:
 hands = mp_hands.Hands(
-    min_detection_confidence=0.6, min_tracking_confidence=0.5)
+    min_detection_confidence=0.5, min_tracking_confidence=0.5)
     
     #CHANGE VIDEO NAME
 cap = cv2.VideoCapture('asmrvid3.mov')
@@ -64,7 +64,7 @@ while cap.isOpened():
       if(codefold):
           mp_drawing.draw_landmarks(
               image, hand_landmarks, mp_hands.HAND_CONNECTIONS)
-          ''' ----------------------------IGNORE--------------------------------------- '''
+          ''' ----------------------------HANDS--------------------------------------- '''
           ''' ------------------------------------------------------------------------ '''
           framrArr.append([hand_landmarks.landmark[mp_hands.HandLandmark.WRIST].x,hand_landmarks.landmark[mp_hands.HandLandmark.WRIST].y, hand_landmarks.landmark[mp_hands.HandLandmark.WRIST].z ])
           
